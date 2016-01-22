@@ -11,6 +11,8 @@ if position 1 in the name string is, insert the name into alphabetical
 
 ... ...
 
+if position 1 in the string is z, insert the name into alphabetical
+
 continue until all the individual names are in alpha, and they have been inserted into alpha in order
 
 (To make a distinction between, for example, the name adams and anderson, I would need a sub-if category under the if statement for each individual letter)

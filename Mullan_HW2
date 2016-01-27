@@ -44,6 +44,27 @@ def mylen('w'):     # w is the string input
   
   
 5.
+def vowel('l'):    # l is the one letter input
+  if l == 'a':
+    print 'True'
+    
+  if l == 'e':
+    print 'True'
+    
+  if l == 'i':
+    print 'True'
+    
+  if l == 'o':
+    print 'True'
+    
+  if l == 'u':
+    print 'True'
+    
+  if l == 'y':
+    print 'Sometimes'
+    
+  else:
+    print 'False'
 
     
 

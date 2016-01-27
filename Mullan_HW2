@@ -7,7 +7,7 @@ def fib(n):
   while a<n:
     print (a,end=', ')
     a,b = b,a+b
-  print(a)
+  print a
   
   
 2.
@@ -30,6 +30,20 @@ def max_of_three(a,b,c):
     Max = b
     
   if c>Max:
-    Max=c
+    Max = c
+
+  print Max
+    
+4.
+def mylen('w'):     # w is the string input
+  length=0
+  for char in w:
+    length = length + 1
+    
+  print length
+  
+  
+5.
+
     
 

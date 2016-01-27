@@ -115,5 +115,24 @@ def multiply(list):  #The input is a list of numbers
   print product
   
 8.
+def reverse(string):
+  y = len(string)-1         #Establish y as the index to pull characters from string
+  newstring = ''            #Establish the output newstring as an empty string to put characters into
+  
+  while y>=0:
+    newstring = newstring + string[y]     #Insert characters into newstring starting with the last character in string
+    y=y-1
+    
+  print newstring
+  
+9.
+def is_palindrome(string):
+  reverse(string)                 #Use the reverse function from the previous exercise
+  
+  if string==newstring:
+    print 'True'
+    
+  else:
+    print 'False'
 
   

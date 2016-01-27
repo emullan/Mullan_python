@@ -134,5 +134,47 @@ def is_palindrome(string):
     
   else:
     print 'False'
+    
+10.
+def is_member(x,a):   #function to find if x is in a
+  z=0
+  y = len(a)
+  s=0                   #If s is positive, then there is an x in a
+  
+  while z<y:
+  
+    if x==a[z]:       #Check each index of a for x
+      s = s+1         #increment s if a is in x
+      z=z+1
+      
+    else:
+      z=z+1         
+      
+  if s>0:
+    print 'true'
+    
+  else:
+    print 'false'
+      
+      
+11.
+def overlapping(a,b):
+
+  s=0                 #If s is positive, they have a member in common
+  
+ for chara in a:
+ 
+  for charb in b:
+  
+    if chara==charb:
+      s=s+1
+      
+  if s>0
+    print 'True'
+    
+  else:
+    print 'False'
+    
+  
 
   

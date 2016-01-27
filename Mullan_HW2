@@ -162,11 +162,11 @@ def overlapping(a,b):
 
   s=0                 #If s is positive, they have a member in common
   
- for chara in a:
+ for chara in a:      #Nested for loop that combines to check every pairing of a and b
  
   for charb in b:
   
-    if chara==charb:
+    if chara==charb:  #Increments the counter if there is a match
       s=s+1
       
   if s>0
@@ -174,6 +174,18 @@ def overlapping(a,b):
     
   else:
     print 'False'
+    
+    
+12.
+def generate_n_chars(n,c):    #n is a number and c is a character
+  s=0
+  string = ''
+  
+  while s<n
+    string = string + c       #attach another character c to the end of the string until we have the number we need
+    s = s+1
+    
+  print string
     
   
 

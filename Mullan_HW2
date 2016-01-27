@@ -1,21 +1,20 @@
 #Mullan HW2
 
 1.
-def fib(n):
-  a,b = 0,1
+def fib(n):                 #Takes an input n and prints fibonaccit numbers less than n
+  a,b = 0,1                 #I used the function in the class notes
   
   while a<n:
-    print (a,end=', ')
+    print (a,end=', ')      #Print the fibonacci number and a comma
     a,b = b,a+b
-  print a
+  print a                   #Print the last number
   
   
 2.
-def mymax(a,b):
-  if a==b:
-    print "They are equal"
+def mymax(a,b):                 #Takes 2 inputs and prints the larger input
+ 
     
-  if a > b:
+  if a >= b:                    #If they are equal it only prints one of the numbers
     print a
     
   if a<b:
@@ -23,13 +22,13 @@ def mymax(a,b):
     
     
 3.
-def max_of_three(a,b,c):
-  Max = a
+def max_of_three(a,b,c):        #Gives the largest of 3 numbers
+  Max = a                       #Assume the first number is the max
   
-  if b>a:
+  if b>a:                       #If the next number is larger, it is the max
     Max = b
     
-  if c>Max:
+  if c>Max:                     #If the 3rd number is larger than both, it is the max
     Max = c
 
   print Max
@@ -37,8 +36,8 @@ def max_of_three(a,b,c):
 4.
 def mylen('w'):     # w is the string input
   length=0
-  for char in w:
-    length = length + 1
+  for char in w:              
+    length = length + 1       #Increment the length with each character in w
     
   print length
   
@@ -46,8 +45,8 @@ def mylen('w'):     # w is the string input
 5.
 def vowel('l'):    # l is the one letter input
   x=0
-  if l == 'a':
-    print 'True'
+  if l == 'a':      #Check each vowel to see if the input is a vowel
+    print 'True'    #The x's are to make this function usable in exercise 6
     x=1
     
   if l == 'e':
@@ -62,7 +61,7 @@ def vowel('l'):    # l is the one letter input
     print 'True'
     x=1
     
-  if l == 'u':
+  if l == 'u':        
     print 'True'
     x=1
     
@@ -77,18 +76,18 @@ def translate('string'):    #string is the input string for this function
   y=0
   z=len(string)   # sets up a comparison point for i know when to stop my loop
   
-  while y<z
+  while y<z:             #Makes sure we stop at the end of the string
     vowel(string[y])    #Uses the function vowel from problem 5 to see if the character is a vowel. If x=0, the character is a consonant
     
     if x=0:
       string = string[:y] + 'o' + string[y] + string[y+1:]    #string is now the string with the new letters inserted
-      y=y+3
-      z=len(string)                                           #Reset te new string length for comparison
+      y=y+3                                                   #Increment y by 3 to skip over the characters I just inserted
+      z=len(string)                                           #Reset the new string length for comparison in the while loop
       
     else:
       y=y+1                                                   #If the character is a vowel, increment y and check the next index
       
-  print string
+  print string                                                #After the while loop
   
 7.
 def sum(list):      #The input is a list of numbers
@@ -97,7 +96,7 @@ def sum(list):      #The input is a list of numbers
   x=0
   y=len(list)   #Set up a counter to make sure I stop adding at the end of the list
   
-  while x<y
+  while x<y:
     sum = sum + list[x]
     x = x+1
     
@@ -108,7 +107,7 @@ def multiply(list):  #The input is a list of numbers
   x=0
   y=len(list)   #Set up a counter to make sure I stop adding at the end of the list
   
-  while x<y
+  while x<y:
     product = product * list[x]
     x = x+1
     
@@ -169,7 +168,7 @@ def overlapping(a,b):
     if chara==charb:  #Increments the counter if there is a match
       s=s+1
       
-  if s>0
+  if s>0              #If the counter has been incremented at all, there is a match
     print 'True'
     
   else:

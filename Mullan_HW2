@@ -9,3 +9,27 @@ def fib(n):
     a,b = b,a+b
   print(a)
   
+  
+2.
+def mymax(a,b):
+  if a==b:
+    print "They are equal"
+    
+  if a > b:
+    print a
+    
+  if a<b:
+    print b
+    
+    
+3.
+def max_of_three(a,b,c):
+  Max = a
+  
+  if b>a:
+    Max = b
+    
+  if c>Max:
+    Max=c
+    
+

@@ -1,0 +1,13 @@
+Mullan_HW3
+
+1. Histogram
+def histogram(list):
+    for int in list:
+        y=int
+        x=0
+        string = ''
+        while x<int:
+            string = string + '*'
+            x=x+1
+            
+        print (string)

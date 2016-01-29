@@ -11,3 +11,18 @@ def histogram(list):
             x=x+1
             
         print (string)
+        
+2. maximum in a list
+def max_in_list(list):
+    x=1
+    y=len(list)
+    max=list[0]
+    
+    while x<y:
+        if list[x]>max:
+            max=list[x]
+            x=x+1
+        else:
+            x=x+1
+    
+    print (max)

@@ -55,3 +55,38 @@ def filter_long_words(words,n):
             longwords.append(string)
             
     return longwords
+    
+6. advanced palindromes
+from string import punctuation
+def strip_string(s):                #This function converts capital case to lower case and strips punctuation and blank spaces
+    
+    new=list(s)                     #Converts the string s to a list and replaces spaces with nothing
+    x=0
+    for char in new:
+        if new[x]==' ':
+            new[x]=''
+        
+        x=x+1
+    d = ''.join(new)                #Joins the list into a string d
+    d=d.lower()                     #Converts upper case letters in string d to lower case
+    return ''.join(c for c in d if c not in punctuation)    #removes punctuation
+
+def reverse(string):        #Gets the palindrome of a string
+  y = len(string)-1         #Establish y as the index to pull characters from string
+  newstring = ''            #Establish the output newstring as an empty string to put characters into
+  
+  while y>=0:
+    newstring = newstring + string[y]     #Insert characters into newstring starting with the last character in string
+    y=y-1
+    
+  return (newstring)
+
+def is_palindrome(string):
+    stripped=strip_string(string)                   #Use the strip_string function to remove punctuation and spaces
+    newstring = reverse(stripped)                 #Use the reverse function to get the palindrome of the stripped string
+  
+    if stripped==newstring:                         #compare the stripped string to its palindrome
+            print ("True")
+    
+    else:
+            print ('False')

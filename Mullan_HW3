@@ -24,5 +24,13 @@ def max_in_list(list):
             x=x+1
         else:
             x=x+1
-    
     print (max)
+    
+    3. Lengths of words
+def listofwords(words):     #words must be a list of strings in brackets. For example: ['Hoya','Saxa','Jack']
+    numberlist = []         #Blank list to put lengths in  
+    x=0                     #counter for the position in the input words
+    for string in words:
+        numberlist.append(len(words[x]))    #Places the len of the string in the list   
+        x=x+1                               #Increase the counter to get the length of the next string
+    return (numberlist)

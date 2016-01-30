@@ -98,3 +98,10 @@ def pangram(string):
         return True
     else:
         return False
+        
+8. Coke on the wall
+def lyrics():
+    x=99
+    while x>0:
+        print (x , ' bottles of coke on the wall, ' , x , 'bottles of coke. \nTake one down, pass it around, ' , x-1 , ' bottles of coke on the wall.')
+        x=x-1

@@ -105,3 +105,10 @@ def lyrics():
     while x>0:
         print (x , ' bottles of coke on the wall, ' , x , 'bottles of coke. \nTake one down, pass it around, ' , x-1 , ' bottles of coke on the wall.')
         x=x-1
+        
+9. English to swedish translator
+def translate(list):                    #Input must be a list of strings. Won't work if you input a string that is not in the dictionary
+    d={'merry':'god','christmas':'jul','and':'och','happy':'got','new':'nytt','year':'ar'}
+    for word in list:
+        word=d[word]
+        return word

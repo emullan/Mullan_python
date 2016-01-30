@@ -86,7 +86,15 @@ def is_palindrome(string):
     newstring = reverse(stripped)                 #Use the reverse function to get the palindrome of the stripped string
   
     if stripped==newstring:                         #compare the stripped string to its palindrome
-            print ("True")
+            return True
     
     else:
-            print ('False')
+            return False
+            
+7. Pangrams
+def pangram(string):
+    string=string.lower()
+    if ('a' in string) and ('b' in string) and ('c' in string) and ('d' in string) and ('e' in string) and ('f' in string) and ('g' in string) and ('h' in string) and ('i' in string) and ('j' in string) and ('k' in string) and ('l' in string) and ('m' in string) and ('n' in string) and ('o' in string) and ('p' in string) and ('q' in string) and ('r' in string) and ('s' in string) and ('t' in string) and ('u' in string) and ('v' in string) and ('w' in string) and ('x' in string) and ('y' in string) and ('z' in string):
+        return True
+    else:
+        return False

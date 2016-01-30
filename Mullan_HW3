@@ -46,3 +46,12 @@ def find_longest_word(words):           #words must be a list of strings in brac
         x=x+1                           #Increase the counter to check the next word in the list
                 
     return len(longest)                 #Return the length of the longest word
+
+5. Filter long words
+def filter_long_words(words,n):
+    longwords = []                      #Create an empty list to put my words in if they fit criteria
+    for string in words:                #Check every string in the list
+        if len(string)>n:               #Add the string to the empty list longwords if it is long enough
+            longwords.append(string)
+            
+    return longwords

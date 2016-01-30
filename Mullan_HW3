@@ -26,7 +26,7 @@ def max_in_list(list):
             x=x+1
     print (max)
     
-    3. Lengths of words
+3. Lengths of words
 def listofwords(words):     #words must be a list of strings in brackets. For example: ['Hoya','Saxa','Jack']
     numberlist = []         #Blank list to put lengths in  
     x=0                     #counter for the position in the input words
@@ -34,3 +34,15 @@ def listofwords(words):     #words must be a list of strings in brackets. For ex
         numberlist.append(len(words[x]))    #Places the len of the string in the list   
         x=x+1                               #Increase the counter to get the length of the next string
     return (numberlist)
+
+4. Find longest word
+def find_longest_word(words):           #words must be a list of strings in brackets
+    longest = words[0]                  #assume the first one is the longest
+    x=0                                 #Counter
+    for string in words:
+        if len(words[x])>len(longest):  #if the string that we are looking at is longer than the previous longest word,
+            longest = words[x]          #It is the new longest word
+        
+        x=x+1                           #Increase the counter to check the next word in the list
+                
+    return len(longest)                 #Return the length of the longest word

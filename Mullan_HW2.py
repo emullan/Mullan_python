@@ -187,5 +187,64 @@ def generate_n_chars(n,c):    #n is a number and c is a character
   print string
     
   
+## Test cases
 
+print('#1\n')
+fib(500)
+print('\n')
+
+print('#2\n')
+print(mymax(45,987), '\n')
+
+print('#3\n')
+print(max_of_three(3,4,5),'\n')
+
+print('#4\n')
+print(mylen('Gerhard'))
+print(mylen([1,2,3,4,5,6,7]))
+print('\n')
+
+print('#5\n')
+print(vowel('e'))
+print(vowel('H'))
+print('\n')
+
+print('#6\n')
+print(translate("this is fun"))
+print(translate('aeiou'))
+print(translate('YYYYYYY'))
+print(translate("mmmmmm"))
+print('\n')
+
+print('#7\n')
+print(sum([1,2,3,4,5]))
+print('\n')
+
+print('#8\n')
+print(multiply([0,1,2,3]))
+print(multiply([1,2,3,4]))
+print('\n')
+
+print('#9\n')
+print(reverse("gnitset ma I"))
+print('\n')
+
+print('#10\n')
+print(is_palindrome('radar'))
+print(is_palindrome('Gerhard'))
+print('\n')
+
+print('#11\n')
+print(is_member('dog', ['cat', 'dog', 'zebra']))
+print(is_member(3, [1,2,3,4]))
+print(is_member(3, [5,6,7]))
+print('\n')
+
+print('#12\n')
+print(overlapping([1,2,3], [3,4,5]))
+print(overlapping([1,2,3], [6,4,5]))
+print('\n')
+
+print('#13\n')
+print(generate_n_chars(7, 'g'))
   

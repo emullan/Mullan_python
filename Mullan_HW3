@@ -113,7 +113,11 @@ def translate(list):                    #Input must be a list of strings. Won't 
         word=d[word]
         return word
         
-10.
+10. Character Frequency counter
+def char_freq(string):
+    lis=list(string)                        #Turn the string into a list
+    d = {x:lis.count(x) for x in lis}       #Create a dictionary mapping the character to the count for each character
+    return d                                #Return the dictionary
 
 
 

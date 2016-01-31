@@ -132,3 +132,16 @@ def cypher(string):
         x=x+1
     s=''.join(lis)                          #Join the characters back to a string s
     return s
+
+12. Correct spacing issues
+def correct(string):
+    lis=list(string)                                    #turn the string into a list
+    x=0                         
+    for char in lis:
+        if (lis[x] == ' ') and (lis[x+1]==' '):         #If there are 2 straight spaces, delete the first space
+            lis[x]=''
+        if (lis[x]=='.') and (lis[x+1]!=' '):           #If there is no space after a period, insert a space
+            lis.insert(x+1, ' ')
+        x=x+1
+    s=''.join(lis)                                      #Join the list back into a string
+    return s

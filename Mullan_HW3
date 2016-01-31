@@ -145,3 +145,16 @@ def correct(string):
         x=x+1
     s=''.join(lis)                                      #Join the list back into a string
     return s
+    
+13. Create 3rd person singular form of verbs
+def make_3sg_form(verb):
+    tup=('o','ch','s','sh','x','z')                 #Create a tuple to account for multiple possibilities
+    if verb.endswith('y'):                          #If the verb ends in y, drop the y and add ies to the end of the verb
+        verb= verb[:len(verb)-1]+'ies'
+        return verb                                 #Return statement must be within the if statement so it doesnt add an extra ending in the next step
+    if verb.endswith(tup):                          #If the verb ends with something in the tuple, add es to the end of the verb
+        verb=verb + 'es'
+        return verb
+    else:                                           #otherwise, jut add s to the end of the verb
+        verb=verb+'s'
+        return verb

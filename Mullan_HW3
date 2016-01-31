@@ -112,3 +112,19 @@ def translate(list):                    #Input must be a list of strings. Won't 
     for word in list:
         word=d[word]
         return word
+        
+10.
+
+
+
+11. Caesar Cypher
+def cypher(string):
+    key={'a':'n','b':'o','c':'p','d':'q','e':'r','f':'s','g':'t','h':'u','i':'v','j':'w','k':'x','l':'y','m':'z','n':'a','o':'b','p':'c','q':'d','r':'e','s':'f','t':'g','u':'h','v':'i','w':'j','x':'k','y':'l','z':'m','A':'N','B':'O','C':'P','D':'Q','E':'R','F':'S','G':'T','H':'U','I':'V','J':'W','K':'X','L':'Y','M':'Z','N':'A','O':'B','P':'C','Q':'D','R':'E','S':'F','T':'G','U':'H','V':'I','W':'J','X':'K','Y':'L','Z':'M'}
+    lis=list(string)                        #Break the string down to a list of characters
+    x=0
+    for char in lis:                        #Run through each character in the list
+        if char in key:                     #Check to make sure the character is in the dictionary (exclude punctuation and spaces)
+            lis[x]=key[lis[x]]              #Replace the character with the corresponding cipher key
+        x=x+1
+    s=''.join(lis)                          #Join the characters back to a string s
+    return s

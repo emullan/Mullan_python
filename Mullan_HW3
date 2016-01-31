@@ -158,3 +158,21 @@ def make_3sg_form(verb):
     else:                                           #otherwise, jut add s to the end of the verb
         verb=verb+'s'
         return verb
+
+14. present participle generator
+def make_ing_form(verb):
+    vowels=['a','e','i','o','u']                        #Create list of vowels to reference
+    exceptions=['be','see','flee','knee']               #Establish some of the exceptions to the first rule
+    lis=list(verb)                                      #make a list of letters in verb to reference
+    if verb.endswith('e') and verb not in exceptions and lis[len(lis)-2]!='i':  #Verbs that arent exceptions and end in e
+        verb=verb[:len(verb)-1]+'ing'
+        return verb
+    if verb.endswith('ie'):                             #verbs that end in ie
+        verb=verb[:len(verb)-2]+'ying'
+        return verb
+    if verb[len(verb)-3] not in vowels and verb[len(verb)-2] in vowels and verb[len(verb)-1] not in vowels:     #Verbs that end in cons-vowel-cons
+        verb=verb+verb[len(verb)-1]+'ing'
+        return verb
+    else:
+        verb=verb+'ing'
+        return verb                                     #Return statement under each condition so it doesnt add extra endings

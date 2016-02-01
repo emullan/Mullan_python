@@ -2,24 +2,24 @@ Mullan_HW3
 
 1. Histogram
 def histogram(list):
-    for int in list:
-        y=int
+    for int in list:                    #Check every integer in the list               
+        y=int                           # establish comparison between the number and counter
         x=0
         string = ''
-        while x<int:
-            string = string + '*'
+        while x<y:
+            string = string + '*'       #add an asterisk for every time through the loop
             x=x+1
             
-        print (string)
+        print (string)                  #Print the string after each while loop is complete
         
 2. maximum in a list
 def max_in_list(list):
-    x=1
+    x=1                             
     y=len(list)
-    max=list[0]
+    max=list[0]                         #assume the 1st one is the max
     
-    while x<y:
-        if list[x]>max:
+    while x<y:                          #While we are going through the list
+        if list[x]>max:                 #Set a new max if the one we're checking is bigger than the current max
             max=list[x]
             x=x+1
         else:
@@ -93,15 +93,15 @@ def is_palindrome(string):
             
 7. Pangrams
 def pangram(string):
-    string=string.lower()
+    string=string.lower()                               #Change it to all lower case to check
     if ('a' in string) and ('b' in string) and ('c' in string) and ('d' in string) and ('e' in string) and ('f' in string) and ('g' in string) and ('h' in string) and ('i' in string) and ('j' in string) and ('k' in string) and ('l' in string) and ('m' in string) and ('n' in string) and ('o' in string) and ('p' in string) and ('q' in string) and ('r' in string) and ('s' in string) and ('t' in string) and ('u' in string) and ('v' in string) and ('w' in string) and ('x' in string) and ('y' in string) and ('z' in string):
-        return True
+        return True                                     #Returns true if it has all 26 lower case letters
     else:
         return False
         
 8. Coke on the wall
 def lyrics():
-    x=99
+    x=99                                                #start count at 99 and decrease until it is at 1
     while x>0:
         print (x , ' bottles of coke on the wall, ' , x , 'bottles of coke. \nTake one down, pass it around, ' , x-1 , ' bottles of coke on the wall.')
         x=x-1
@@ -110,7 +110,7 @@ def lyrics():
 def translate(list):                    #Input must be a list of strings. Won't work if you input a string that is not in the dictionary
     d={'merry':'god','christmas':'jul','and':'och','happy':'got','new':'nytt','year':'ar'}
     for word in list:
-        word=d[word]
+        word=d[word]                    #Translate each word in the list according to the dictionary
         return word
         
 10. Character Frequency counter

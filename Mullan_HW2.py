@@ -42,44 +42,45 @@ def mylen('w'):     # w is the string input
   return length
   
   
-5.
-def vowel('l'):    # l is the one letter input
+#5. takes a character and returns true if it is a vowel
+def vowel(a):    # l is the one letter input
   x=0
+  l=a.lower()
   if l == 'a':      #Check each vowel to see if the input is a vowel
-    print 'True'    #The x's are to make this function usable in exercise 6
+    return True    #The x's are to make this function usable in exercise 6
     x=1
     
   if l == 'e':
-    print 'True'
+    return True
     x=1
     
   if l == 'i':
-    print 'True'
+    return True
     x=1
     
   if l == 'o':
-    print 'True'
+    return True
     x=1
     
   if l == 'u':        
-    print 'True'
+    return True
     x=1
     
   if l == 'y':
-    print 'Sometimes'
+    return 'Sometimes'
     
   else:
-    print 'False'
+    return False
 
-6.
-def translate('string'):    #string is the input string for this function
+#6. Translates a string to double every consonant and place an o in between
+def translate(string):    #string is the input string for this function
   y=0
   z=len(string)   # sets up a comparison point for i know when to stop my loop
   
   while y<z:             #Makes sure we stop at the end of the string
-    vowel(string[y])    #Uses the function vowel from problem 5 to see if the character is a vowel. If x=0, the character is a consonant
-    
-    if x=0:
+        
+    vowels=['a','e','i','o','u']                                #Set up a list of vowels to check the char 
+    if string[y] not in vowels:
       string = string[:y] + 'o' + string[y] + string[y+1:]    #string is now the string with the new letters inserted
       y=y+3                                                   #Increment y by 3 to skip over the characters I just inserted
       z=len(string)                                           #Reset the new string length for comparison in the while loop
@@ -87,9 +88,9 @@ def translate('string'):    #string is the input string for this function
     else:
       y=y+1                                                   #If the character is a vowel, increment y and check the next index
       
-  print string                                                #After the while loop
+  return string                                             #After the while loop
   
-7.
+#Sum and multiply return the sum and product of the input list of numbers
 def sum(list):      #The input is a list of numbers
   
   sum = 0
@@ -100,7 +101,7 @@ def sum(list):      #The input is a list of numbers
     sum = sum + list[x]
     x = x+1
     
-  print sum
+  return sum
   
 def multiply(list):  #The input is a list of numbers
   product = 1
@@ -111,7 +112,7 @@ def multiply(list):  #The input is a list of numbers
     product = product * list[x]
     x = x+1
     
-  print product
+  return product
   
 8.
 def reverse(string):
@@ -122,17 +123,23 @@ def reverse(string):
     newstring = newstring + string[y]     #Insert characters into newstring starting with the last character in string
     y=y-1
     
-  print newstring
+  return newstring
   
 9.
 def is_palindrome(string):
-  reverse(string)                 #Use the reverse function from the previous exercise
+  y = len(string)-1         #Establish y as the index to pull characters from string
+  newstring = ''            #Establish the output newstring as an empty string to put characters into
+  
+  while y>=0:
+    newstring = newstring + string[y]     #Insert characters into newstring starting with the last character in string
+    y=y-1               
   
   if string==newstring:
-    print 'True'
+    return True
     
   else:
-    print 'False'
+    return False
+
     
 10.
 def is_member(x,a):   #function to find if x is in a

@@ -90,7 +90,7 @@ def translate(string):    #string is the input string for this function
       
   return string                                             #After the while loop
   
-#Sum and multiply return the sum and product of the input list of numbers
+#7. Sum and multiply return the sum and product of the input list of numbers
 def sum(list):      #The input is a list of numbers
   
   sum = 0
@@ -114,7 +114,7 @@ def multiply(list):  #The input is a list of numbers
     
   return product
   
-8.
+#8. Take a string and output the reverse of the string
 def reverse(string):
   y = len(string)-1         #Establish y as the index to pull characters from string
   newstring = ''            #Establish the output newstring as an empty string to put characters into
@@ -125,7 +125,7 @@ def reverse(string):
     
   return newstring
   
-9.
+#9. is_palindrome takes a string and returns true if it is a palindrome
 def is_palindrome(string):
   y = len(string)-1         #Establish y as the index to pull characters from string
   newstring = ''            #Establish the output newstring as an empty string to put characters into
@@ -141,7 +141,7 @@ def is_palindrome(string):
     return False
 
     
-10.
+#10. returns true if x is a member of list a
 def is_member(x,a):   #function to find if x is in a
   z=0
   y = len(a)
@@ -157,41 +157,41 @@ def is_member(x,a):   #function to find if x is in a
       z=z+1         
       
   if s>0:
-    print 'true'
+    return True
     
   else:
-    print 'false'
+    Return false
       
       
-11.
+#11. returns true if there is a member of a that is also a member of b
 def overlapping(a,b):
 
-  s=0                 #If s is positive, they have a member in common
+    s=0                 #If s is positive, they have a member in common
   
- for chara in a:      #Nested for loop that combines to check every pairing of a and b
+    for chara in a:      #Nested for loop that combines to check every pairing of a and b
  
-  for charb in b:
+        for charb in b:
   
-    if chara==charb:  #Increments the counter if there is a match
-      s=s+1
+            if chara==charb:  #Increments the counter if there is a match
+              s=s+1
       
-  if s>0              #If the counter has been incremented at all, there is a match
-    print 'True'
+    if s>0:              #If the counter has been incremented at all, there is a match
+        return True
     
-  else:
-    print 'False'
+    else:
+        return False
     
     
-12.
+#12. generates the character c n times
 def generate_n_chars(n,c):    #n is a number and c is a character
   s=0
   string = ''
   
-  while s<n
+  while s<n:
     string = string + c       #attach another character c to the end of the string until we have the number we need
     s = s+1
     
-  print string
+  return string
     
   
 ## Test cases

@@ -34,7 +34,7 @@ def max_of_three(a,b,c):        #Gives the largest of 3 numbers
   return Max
     
 #4. mylen takes a string and outputs the length of the string
-def mylen('w'):     # w is the string input
+def mylen(w):     # w is the string input
   length=0
   for char in w:              
     length = length + 1       #Increment the length with each character in w
@@ -160,7 +160,7 @@ def is_member(x,a):   #function to find if x is in a
     return True
     
   else:
-    Return false
+    return False
       
       
 #11. returns true if there is a member of a that is also a member of b

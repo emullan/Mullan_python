@@ -1,27 +1,27 @@
 #Mullan HW2
 
-1.
+#1. Fibonacci: returns all fibonacci numbers lower than input n
 def fib(n):                 #Takes an input n and prints fibonaccit numbers less than n
   a,b = 0,1                 #I used the function in the class notes
   
   while a<n:
     print (a,end=', ')      #Print the fibonacci number and a comma
     a,b = b,a+b
-  print a                   #Print the last number
   
   
-2.
+  
+#2. mymax: take 2 numbers and print the max of the 2
 def mymax(a,b):                 #Takes 2 inputs and prints the larger input
  
     
   if a >= b:                    #If they are equal it only prints one of the numbers
-    print a
+    return a
     
   if a<b:
-    print b
+    return b
     
     
-3.
+#3. max_of_three takes 3 numbers and returns the max number
 def max_of_three(a,b,c):        #Gives the largest of 3 numbers
   Max = a                       #Assume the first number is the max
   
@@ -31,15 +31,15 @@ def max_of_three(a,b,c):        #Gives the largest of 3 numbers
   if c>Max:                     #If the 3rd number is larger than both, it is the max
     Max = c
 
-  print Max
+  return Max
     
-4.
+#4. mylen takes a string and outputs the length of the string
 def mylen('w'):     # w is the string input
   length=0
   for char in w:              
     length = length + 1       #Increment the length with each character in w
     
-  print length
+  return length
   
   
 5.

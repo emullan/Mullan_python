@@ -78,8 +78,9 @@ def translate(string):    #string is the input string for this function
   z=len(string)   # sets up a comparison point for i know when to stop my loop
   
   while y<z:             #Makes sure we stop at the end of the string
-        
-    vowels=['a','e','i','o','u']                                #Set up a list of vowels to check the char 
+    # SHOULD INCLUDE CAPITAL VOWELS
+    vowels=['a','e','i','o','u']                                #Set up a list of vowels to check the char
+    # THIS LOGIC CREATES AN EXTRA O AT THE BEGINNING OF THE string (SEE OUTPUT)
     if string[y] not in vowels:
       string = string[:y] + 'o' + string[y] + string[y+1:]    #string is now the string with the new letters inserted
       y=y+3                                                   #Increment y by 3 to skip over the characters I just inserted

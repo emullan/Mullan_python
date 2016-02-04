@@ -1,6 +1,6 @@
 Mullan_HW3
 
-1. Histogram
+#1. Histogram
 def histogram(list):
     for int in list:                    #Check every integer in the list               
         y=int                           # establish comparison between the number and counter
@@ -12,7 +12,7 @@ def histogram(list):
             
         print (string)                  #Print the string after each while loop is complete
         
-2. maximum in a list
+#2. maximum in a list
 def max_in_list(list):
     x=1                             
     y=len(list)
@@ -26,7 +26,7 @@ def max_in_list(list):
             x=x+1
     print (max)
     
-3. Lengths of words
+#3. Lengths of words
 def listofwords(words):     #words must be a list of strings in brackets. For example: ['Hoya','Saxa','Jack']
     numberlist = []         #Blank list to put lengths in  
     x=0                     #counter for the position in the input words
@@ -35,7 +35,7 @@ def listofwords(words):     #words must be a list of strings in brackets. For ex
         x=x+1                               #Increase the counter to get the length of the next string
     return (numberlist)
 
-4. Find longest word
+#4. Find longest word
 def find_longest_word(words):           #words must be a list of strings in brackets
     longest = words[0]                  #assume the first one is the longest
     x=0                                 #Counter
@@ -47,7 +47,7 @@ def find_longest_word(words):           #words must be a list of strings in brac
                 
     return len(longest)                 #Return the length of the longest word
 
-5. Filter long words
+#5. Filter long words
 def filter_long_words(words,n):
     longwords = []                      #Create an empty list to put my words in if they fit criteria
     for string in words:                #Check every string in the list
@@ -56,7 +56,7 @@ def filter_long_words(words,n):
             
     return longwords
     
-6. advanced palindromes
+#6. advanced palindromes
 from string import punctuation
 def strip_string(s):                #This function converts capital case to lower case and strips punctuation and blank spaces
     
@@ -91,7 +91,7 @@ def is_palindrome(string):
     else:
             return False
             
-7. Pangrams
+#7. Pangrams
 def pangram(string):
     string=string.lower()                               #Change it to all lower case to check
     if ('a' in string) and ('b' in string) and ('c' in string) and ('d' in string) and ('e' in string) and ('f' in string) and ('g' in string) and ('h' in string) and ('i' in string) and ('j' in string) and ('k' in string) and ('l' in string) and ('m' in string) and ('n' in string) and ('o' in string) and ('p' in string) and ('q' in string) and ('r' in string) and ('s' in string) and ('t' in string) and ('u' in string) and ('v' in string) and ('w' in string) and ('x' in string) and ('y' in string) and ('z' in string):
@@ -99,21 +99,21 @@ def pangram(string):
     else:
         return False
         
-8. Coke on the wall
+#8. Coke on the wall
 def lyrics():
     x=99                                                #start count at 99 and decrease until it is at 1
     while x>0:
         print (x , ' bottles of coke on the wall, ' , x , 'bottles of coke. \nTake one down, pass it around, ' , x-1 , ' bottles of coke on the wall.')
         x=x-1
         
-9. English to swedish translator
+#9. English to swedish translator
 def translate(list):                    #Input must be a list of strings. Won't work if you input a string that is not in the dictionary
     d={'merry':'god','christmas':'jul','and':'och','happy':'got','new':'nytt','year':'ar'}
     for word in list:
         word=d[word]                    #Translate each word in the list according to the dictionary
         return word
         
-10. Character Frequency counter
+#10. Character Frequency counter
 def char_freq(string):
     lis=list(string)                        #Turn the string into a list
     d = {x:lis.count(x) for x in lis}       #Create a dictionary mapping the character to the count for each character
@@ -121,7 +121,7 @@ def char_freq(string):
 
 
 
-11. Caesar Cypher
+#11. Caesar Cypher
 def cypher(string):
     key={'a':'n','b':'o','c':'p','d':'q','e':'r','f':'s','g':'t','h':'u','i':'v','j':'w','k':'x','l':'y','m':'z','n':'a','o':'b','p':'c','q':'d','r':'e','s':'f','t':'g','u':'h','v':'i','w':'j','x':'k','y':'l','z':'m','A':'N','B':'O','C':'P','D':'Q','E':'R','F':'S','G':'T','H':'U','I':'V','J':'W','K':'X','L':'Y','M':'Z','N':'A','O':'B','P':'C','Q':'D','R':'E','S':'F','T':'G','U':'H','V':'I','W':'J','X':'K','Y':'L','Z':'M'}
     lis=list(string)                        #Break the string down to a list of characters
@@ -133,7 +133,7 @@ def cypher(string):
     s=''.join(lis)                          #Join the characters back to a string s
     return s
 
-12. Correct spacing issues
+#12. Correct spacing issues
 def correct(string):
     lis=list(string)                                    #turn the string into a list
     x=0                         
@@ -146,7 +146,7 @@ def correct(string):
     s=''.join(lis)                                      #Join the list back into a string
     return s
     
-13. Create 3rd person singular form of verbs
+#13. Create 3rd person singular form of verbs
 def make_3sg_form(verb):
     tup=('o','ch','s','sh','x','z')                 #Create a tuple to account for multiple possibilities
     if verb.endswith('y'):                          #If the verb ends in y, drop the y and add ies to the end of the verb
@@ -159,7 +159,7 @@ def make_3sg_form(verb):
         verb=verb+'s'
         return verb
 
-14. present participle generator
+#14. present participle generator
 def make_ing_form(verb):
     vowels=['a','e','i','o','u']                        #Create list of vowels to reference
     exceptions=['be','see','flee','knee']               #Establish some of the exceptions to the first rule

@@ -1,0 +1,34 @@
+def polygperim(coords):
+    perimeter=0                 #initialize the distance at 0
+    count=0                    
+    size=len(coords)    
+    last=coords[0]             #The perimeter has to complete the loop from the lastpoint to the first
+    coords.append(last)        #Add the first point to the list in the last position
+    while count < size:
+        point1=coords[count]   #Set the 2 points and their associated x and y's
+        x1=point1[0]
+        y1=point1[1]
+        point2=coords[count+1]
+        x2=point2[0]
+        y2=point2[1]
+        perimeter=perimeter + ((x1-x2)**2 + (y1-y2)**2)**.5  #Add the distance between the points to the perimeter
+        count=count+1        #increase the count
+    return distance
+    
+def polygarea(coords):
+    sum=0                 #initialize the sum to plug into greens theorem
+    count=0                    
+    size=len(coords)
+    last=coords[0]             #The perimeter has to complete the loop from the lastpoint to the first
+    coords.append(last)        #Append the first point to the list in the last position
+    while count<size:
+        point1=coords[count]   #Set the 2 points and their associated x and y's
+        x1=point1[0]
+        y1=point1[1]
+        point2=coords[count+1]
+        x2=point2[0]
+        y2=point2[1]
+        sum = sum + (x1*y2-x2*y1)    #do the summation in green's theorem
+        count=count+1
+    area=.5*abs(sum)                 #Take the abs value of the sum and divide by 2 to complete the formula
+    return area

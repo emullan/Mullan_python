@@ -1,4 +1,6 @@
-Mullan_HW3
+#Mullan_HW3
+
+## Need to use docstrings for function headers
 
 #1. Histogram
 def histogram(list):
@@ -101,12 +103,13 @@ def pangram(string):
         
 #8. Coke on the wall
 def lyrics():
-    x=99                                                #start count at 99 and decrease until it is at 1
+    x=9                                                #start count at 99 and decrease until it is at 1
     while x>0:
         print (x , ' bottles of coke on the wall, ' , x , 'bottles of coke. \nTake one down, pass it around, ' , x-1 , ' bottles of coke on the wall.')
         x=x-1
         
 #9. English to swedish translator
+## Only returns a single word instead of building a list of words - Prof G
 def translate(list):                    #Input must be a list of strings. Won't work if you input a string that is not in the dictionary
     d={'merry':'god','christmas':'jul','and':'och','happy':'got','new':'nytt','year':'ar'}
     for word in list:
@@ -118,8 +121,6 @@ def char_freq(string):
     lis=list(string)                        #Turn the string into a list
     d = {x:lis.count(x) for x in lis}       #Create a dictionary mapping the character to the count for each character
     return d                                #Return the dictionary
-
-
 
 #11. Caesar Cypher
 def cypher(string):
@@ -176,3 +177,41 @@ def make_ing_form(verb):
     else:
         verb=verb+'ing'
         return verb                                     #Return statement under each condition so it doesnt add extra endings
+
+##Test Cases
+help(histogram)
+help(make_ing_form)
+
+print("1 Histogram ", histogram([1,2,3,5,6,7,6,5,4,3,2,1]), '\n')
+
+print("2 Max in List 77 ", max_in_list([1,2,3,77,4,5,6,7]), '\n')
+
+print("3 word to length map 3,5,7,4 ", listofwords(['dog', 'snake', 'dolphin', 'cats']), '\n')
+
+print("4 Longest word 7 ", find_longest_word(['dog', 'snake', 'dolphin', 'cats']), '\n')
+
+print("5 filter long words snake, dolphin ", filter_long_words(['dog', 'snake', 'dolphin', 'cats'],4), '\n')
+
+print("6 Palindrome phrase TRUE ", is_palindrome("Go hang a salami I'm a lasagna hog."), '\n')
+
+print("7 Pangram TRUE ", pangram("The quick brown fox jumps over the lazy dog."), '\n')
+
+print("8 Cokes \n", lyrics())
+
+print("9 Translating to Swedish ['god', 'jul', 'gott'] ", translate(['merry', 'christmas', 'happy']), '\n')
+
+print("10 Char Freq {'a': 7, 'c': 3, 'b': 14, 'e': 2, 'd': 3, 'g': 7, 'f': 3} ", char_freq("agbbabgcbdbabdgbdbabageebabcbgcbffgfabg"), '\n')
+
+print("11 Decoder Caesar cipher? I much prefer Caesar salad!", cypher("Pnrfne pvcure? V zhpu cersre Pnrfne fnynq!"), '\n')
+
+print("12 correct This is very funny and cool. Indeed!", correct("This is very funny and cool.Indeed!"), '\n')
+
+print("13 3ps brushes ", make_3sg_form("brush"), '\n')
+print("13 3ps tries ", make_3sg_form("try"), '\n')
+print("13 3ps runs ", make_3sg_form("run"), '\n')
+print("13 3ps fixes ", make_3sg_form("fix"), '\n')
+
+print("14 ing lying ", make_ing_form("lie"), '\n')
+print("14 ing seeing ", make_ing_form("see"), '\n')
+print("14 ing moving ", make_ing_form("move"), '\n')
+print("14 ing hugging ", make_ing_form("hug"), '\n')
